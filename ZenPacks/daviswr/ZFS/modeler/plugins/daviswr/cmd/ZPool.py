@@ -150,7 +150,7 @@ class ZPool(CommandPlugin):
             # Emulate structure in zdb output for log devices
             # Each device is a root vdev,
             # rather than a child vdev in a logs/cache root
-            elif status_root_match:
+            '''elif status_root_match:
                 if 'cache' == last_type:
                     dev = status_child_match.group('dev')
                     key = 'cache_{}'.format(dev)
@@ -159,7 +159,7 @@ class ZPool(CommandPlugin):
                     last_root = last_tree[key]
                     last_root['title'] = dev
                     last_root['is_cache'] = '1'
-                    last_root['is_log'] = '0'
+                    last_root['is_log'] = '0''''
 
             elif status_child_match:
                 last_type = 'child'
